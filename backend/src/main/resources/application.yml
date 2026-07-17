@@ -10,6 +10,13 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    url: jdbc:mysql://localhost:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: tanish
+    password: Tanish@2009
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:

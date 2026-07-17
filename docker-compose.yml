@@ -7,6 +7,7 @@ services:
       MYSQL_DATABASE: intelsense_db
       MYSQL_USER: Tanish
       MYSQL_PASSWORD: Tanish@2009
+      MYSQL_DATABASE: intelsense
     ports:
       - "3306:3306"
   backend:
@@ -19,6 +20,9 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: Tanish
       SPRING_DATASOURCE_PASSWORD: Tanish@2009
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/intelsense?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
   ai-service:
     build: ./ai-service
     ports:
