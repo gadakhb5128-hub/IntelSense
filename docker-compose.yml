@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: intelsense_db
+      MYSQL_USER: Tanish
+      MYSQL_PASSWORD: Tanish@2009
+    ports:
+      - "3306:3306"
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: Tanish
+      SPRING_DATASOURCE_PASSWORD: Tanish@2009
+  ai-service:
+    build: ./ai-service
+    ports:
+      - "8000:8000"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
