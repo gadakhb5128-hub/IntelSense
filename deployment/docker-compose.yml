@@ -15,6 +15,10 @@ services:
       - "8080:8080"
     depends_on:
       - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: tanish
+      SPRING_DATASOURCE_PASSWORD: Tanish@2009
   ai-service:
     build: ./ai-service
     ports:

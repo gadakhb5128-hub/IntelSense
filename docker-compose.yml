@@ -17,6 +17,9 @@ services:
     depends_on:
       - db
     environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: Tanish
+      SPRING_DATASOURCE_PASSWORD: Tanish@2009
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/intelsense?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root

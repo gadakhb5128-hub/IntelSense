@@ -429,6 +429,21 @@ cd backend
 mvn spring-boot:run
 ```
 
+If you are using PowerShell on Windows and want to start it with the same style as the frontend, this also works:
+```powershell
+cd backend
+npm run dev
+```
+
+> The backend is a Spring Boot Java project, so the real runtime command is Maven. The local wrapper in the backend folder makes the shorter command available.
+
+Before starting the backend, make sure MySQL is running locally. A simple way is:
+```bash
+docker compose up -d db
+```
+
+If you are not using Docker, start your local MySQL server and confirm that the database `intelsense_db` is available.
+
 ### AI Service
 ```bash
 cd ai-service
@@ -474,6 +489,7 @@ By the end of the project, IntelSense will provide:
 - Automatic storage and management of review data.
 - Interactive dashboards with charts and trends.
 - Business reports that support decision-making.
+- A scalable architecture that separates the frontend, backend, AI service, and database.
 - A scalable architecture that separates the frontend, backend, AI service, and database.
 - A scalable architecture that separates the frontend, backend, AI service, and database.
 AI Customer Sentiment Analysis & Business Intelligence Platform
