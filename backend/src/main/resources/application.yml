@@ -3,6 +3,13 @@ server:
 
 spring:
   datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${SPRING_DATASOURCE_USERNAME:Tanish}
+    password: ${SPRING_DATASOURCE_PASSWORD:Tanish@2009}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
     url: jdbc:mysql://localhost:3306/intelsense_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: tanish
     password: Tanish@2009
