@@ -7,6 +7,7 @@ services:
       MYSQL_DATABASE: intelsense_db
       MYSQL_USER: Tanish
       MYSQL_PASSWORD: Tanish@2009
+      MYSQL_DATABASE: intelsense
     ports:
       - "3306:3306"
   backend:

@@ -475,3 +475,13 @@ By the end of the project, IntelSense will provide:
 - Interactive dashboards with charts and trends.
 - Business reports that support decision-making.
 - A scalable architecture that separates the frontend, backend, AI service, and database.
+- A scalable architecture that separates the frontend, backend, AI service, and database.
+AI Customer Sentiment Analysis & Business Intelligence Platform
+
+## Tech Stack
+
+- Java Spring Boot
+- React
+- FastAPI
+- Hugging Face BERT
+- MySQL
